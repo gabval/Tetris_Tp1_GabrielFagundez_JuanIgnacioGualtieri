@@ -4,8 +4,5 @@ public class Tetris {
 
 public Tetris(){
 
-}
-public Tetris(){
-    
-}
+    }
 }
