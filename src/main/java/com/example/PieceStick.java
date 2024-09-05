@@ -6,10 +6,10 @@ public class PieceStick extends Piece{
 
         int[][] PieceStick = {
     
-            {0,1,0},
-            {0,1,0},
-            {0,1,0},
-            {0,1,0},
+            {0,1,0,0},
+            {0,1,0,0},
+            {0,1,0,0},
+            {0,1,0,0}
 
         
         };
@@ -20,6 +20,7 @@ public class PieceStick extends Piece{
     public PieceStick(int[][] piece ){
 
         super(piece);
+        
 
     }
     

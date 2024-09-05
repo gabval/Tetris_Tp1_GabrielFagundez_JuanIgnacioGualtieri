@@ -9,7 +9,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 public class TetrisTest {
 
-
     @Test
     void PieceDog_Test(){
 
@@ -43,6 +42,29 @@ public class TetrisTest {
 
         PieceStick pstick = new PieceStick();
         assert pstick.getPiece() != null;
-    }
+    } 
 
+    @Test
+    void Rotar_Derecha_PieceDog_test(){
+
+        PieceDog pd1 = new PieceDog();
+        PieceDog pd2 = new PieceDog();
+
+        pd1.rotarDerecha(pd1);
+
+        assert pd1.getPiece() != pd2.getPiece();
+        
+    }
+    @Test
+    void Rotar_Izquieda_PieceDog_test(){
+
+        PieceDog pd1 = new PieceDog();
+        PieceDog pd2 = new PieceDog();
+
+        pd1.rotarIzquierda(pd1);
+
+        assert pd1.getPiece() != pd2.getPiece();
+        
+    }
 }
+   

@@ -20,4 +20,6 @@ public class PieceL extends Piece{
         super(piece);
     
     }
+
+    
 }

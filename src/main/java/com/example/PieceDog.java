@@ -2,6 +2,8 @@ package com.example;
 
 public class PieceDog extends Piece {
 
+    //public static final String RotarPieza = null;
+
     public PieceDog(){
 
         int[][] PieceDog = {
@@ -13,6 +15,7 @@ public class PieceDog extends Piece {
         };
 
         setPiece(PieceDog);
+
     }
 
     public PieceDog(int[][] piece ){
