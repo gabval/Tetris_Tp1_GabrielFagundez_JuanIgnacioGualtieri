@@ -1,8 +1,11 @@
 package com.example;
+import java.util.Random;
+
 
 public class Piece {
 
     public int[][] piece; 
+    private Random generadorAleatorios = new Random();
 
     public Piece(){
         
@@ -22,36 +25,54 @@ public class Piece {
         
         return piece;
     }
+    // Método para rotar a la derecha 
+    public void rotarDerecha() {
 
-   // Método para rotar a la derecha 
-   public int[][] rotarDerecha(Piece piece) {
+        int n = piece.length;
+        int m = piece[0].length;
+        int[][] nuevaForma = new int [n][m];
 
-    int n = piece.getPiece().length;
-    int m = piece.getPiece()[0].length;
-
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            piece.getPiece()[j][n - 1 - i] = piece.getPiece()[i][j];  // Rotación a la derecha
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                nuevaForma[j][n - 1 - i] = nuevaForma[i][j];  // Rotación a la derecha
+            }
         }
+
+        setPiece(getPiece());
     }
 
-    return piece.getPiece();
-}
+    // Método para rotar a la izquierda
+    public void rotarIzquierda() {
+        
+        int n = piece.length;
+        int m = piece[0].length;
+        int[][] nuevaForma = new int [n][m];
 
-// Método para rotar a la izquierda
-public int[][] rotarIzquierda(Piece piece) {
-    
-    int n = piece.getPiece().length;
-    int m = piece.getPiece()[0].length;
 
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            piece.getPiece()[m - 1 - j][i] = piece.getPiece()[i][j];  // Rotación a la izquierda
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                piece[m - 1 - j][i] = piece[i][j];  // Rotación a la izquierda
+            }
         }
-    }
 
-    return piece.getPiece();
+        setPiece(getPiece());
 
+        }
+
+    public void elegirLadoRandom(Piece piece){
+        int numeroAleatorio = generadorAleatorios.nextInt(3);
+            
+        if (numeroAleatorio == 0){
+            rotarDerecha();
+        }
+
+        if (numeroAleatorio == 1){
+            rotarIzquierda();
+        }
+
+        else{
+            //XD TOMALA JOSEP
+        }
     }
 }
 

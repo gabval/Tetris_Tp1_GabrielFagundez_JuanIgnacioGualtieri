@@ -6,9 +6,8 @@ public class PieceScuare extends Piece {
 
         int[][] PieceScuare = {
     
-            {1,1,0},
-            {1,1,0},
-            {0,0,0}
+            {1,1},
+            {1,1}
         
         };
 
