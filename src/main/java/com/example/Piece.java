@@ -1,7 +1,6 @@
 package com.example;
 import java.util.Random;
 
-
 public class Piece {
 
     public int[][] piece; 
@@ -71,7 +70,6 @@ public class Piece {
         }
 
         else{
-            //XD TOMALA JOSEP
         }
     }
 }
