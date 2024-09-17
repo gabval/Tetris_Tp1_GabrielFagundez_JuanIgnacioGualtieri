@@ -415,7 +415,7 @@ public class TetrisTest {
     }  
     
     @Test
-    void no_puede_colocar_pieceDog_en_primera_fila_llen(){
+    void no_puede_colocar_pieceDog_en_primera_fila_llena(){
 
         Board board = new Board();
         PieceDog pD = new PieceDog();
@@ -432,7 +432,7 @@ public class TetrisTest {
          assertEquals(-1, result);
      }
      @Test
-    void no_puede_colocar_pieceL_en_primera_fila_llen(){
+    void no_puede_colocar_pieceL_en_primera_fila_llena(){
 
         Board board = new Board();
         PieceL pL = new PieceL();
@@ -483,7 +483,7 @@ public class TetrisTest {
          assertEquals(-1, result);
      }
      @Test
-    void no_puede_colocar_pieceStick_en_primera_fila_llen(){
+    void no_puede_colocar_pieceStick_en_primera_fila_llena(){
 
         Board board = new Board();
         PieceStick pStick = new PieceStick();
