@@ -29,17 +29,6 @@ public class Board {
         return board;
     }
 
-    // Método para verificar si el juego ha terminado
-    public boolean esFinDelJuego() {
-        // Si cualquier celda de la primera fila está ocupada, el juego ha terminado
-        for (int j = 0; j < columna; j++) {
-            if (board[0][j] != 0) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     // Método para colocar una pieza en una posición específica del board
     public int colocarPiece(Piece piece) {
         // Verificar si el juego ha terminado antes de colocar una nueva pieza
@@ -175,6 +164,16 @@ public class Board {
                 return false;
             }
         }
+        // Método para verificar si el juego ha terminado
+    public boolean esFinDelJuego() {
+        // Si cualquier celda de la primera fila está ocupada, el juego ha terminado
+        for (int j = 0; j < columna; j++) {
+            if (board[0][j] != 0) {
+                return true;
+            }
+        }
+        return false;
+    }
     
         // Verifica si una fila está completamente llena
         private boolean FilaCompleta(int fila) {
