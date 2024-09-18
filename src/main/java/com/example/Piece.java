@@ -57,7 +57,7 @@ public class Piece {
         setPiece(getPiece());
 
         }
-
+        //elegir lado random
     public void elegirLadoRandom(Piece piece){
         int numeroAleatorio = generadorAleatorios.nextInt(3);
             

@@ -12,7 +12,7 @@ public class Board {
         board = new int[fila][columna];
     }
 
-    // Constructor con board personalizado
+    // Constructor dandole parametros
     public Board(int[][] board, int fila, int columna) {
         this.board = board;
         this.fila = fila;
@@ -72,16 +72,7 @@ public class Board {
             board[fila][j] = 0;
         }
     }
-
-    // Método para eliminar todas las filas completas
-    public void eliminarFilasCompletas() {
-        for (int i = 0; i < fila; i++) {
-            if (FilaCompleta(i)) {
-                eliminarFila(i);
-            }
-        }
-    }
-
+    
     public void colocarPieceEnPosicion(Piece piece, int fila, int columna) {
         for (int i = 0; i < piece.getPiece().length; i++) {
             for (int j = 0; j < piece.getPiece()[i].length; j++) {
